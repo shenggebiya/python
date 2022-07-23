@@ -16,6 +16,9 @@ def linear_model1():
     x_test=transfer.fit_transform(x_test)
 
     
+    # estimator = Ridge(alpha=1)
+    # estimator.fit(x_train, y_train)
+    # joblib.dump(estimator, "./data/test.pkl")
     estimator=joblib.load("./data/test.pkl")
     y_predict = estimator.predict(x_test)
     print("预测值为:\n", y_predict)
